@@ -10,7 +10,22 @@ This library provides:
 - **Cross-platform** — Linux, macOS, and Windows (with platform-appropriate behavior)
 - **CLI** — `ezi` command compatible with ezinstaller-style `.ezi` scripts
 
-## Build
+## Quick install (pre-built `ezi`)
+
+Download the binary for your platform from [GitHub Releases](https://github.com/codingsushi79/clib/releases), then run:
+
+```bash
+# Linux / macOS
+chmod +x ezi-linux-x86_64   # or ezi-macos-arm64 / ezi-macos-x86_64
+./ezi-linux-x86_64 my-app.ezi
+
+# Windows — unzip ezi-windows-x86_64.zip, then:
+ezi-windows-x86_64.exe my-app.ezi
+```
+
+New releases are built automatically when a `v*` tag is pushed.
+
+## Build from source
 
 Requirements:
 
