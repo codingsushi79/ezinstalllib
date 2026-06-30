@@ -1,4 +1,4 @@
-#include "ezinstall.h"
+#include "ezinstalllib.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,7 +12,7 @@ static void log_cb(void *userdata, const char *message) {
 static void print_header(const ezi_script *script, int dry_run) {
     const ezi_meta *meta = ezi_script_meta(script);
     printf("╭──────────────────────────────────────────╮\n");
-    printf("│ ezinstall");
+    printf("│ ezinstalllib");
     if (dry_run) printf(" · dry run");
     printf("%*s│\n", dry_run ? 18 : 30, "");
     printf("├──────────────────────────────────────────┤\n");

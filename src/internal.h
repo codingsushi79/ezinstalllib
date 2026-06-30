@@ -1,7 +1,7 @@
 #ifndef EZI_INTERNAL_H
 #define EZI_INTERNAL_H
 
-#include "ezinstall.h"
+#include "ezinstalllib.h"
 
 #include <stdio.h>
 

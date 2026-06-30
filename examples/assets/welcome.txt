@@ -1,2 +1,2 @@
-Welcome to clib / ezinstall!
+Welcome to ezinstalllib!
 This file was copied from the examples/assets folder.

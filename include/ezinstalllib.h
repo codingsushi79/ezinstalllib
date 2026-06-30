@@ -1,12 +1,12 @@
 /**
- * ezinstall — C install utilities inspired by
+ * ezinstalllib — C install utilities inspired by
  * https://github.com/codingsushi79/ezinstaller
  *
  * Run EziScript (.ezi) installer definitions or call install primitives
  * directly from C.
  */
-#ifndef EZINSTALL_H
-#define EZINSTALL_H
+#ifndef EZINSTALLLIB_H
+#define EZINSTALLLIB_H
 
 #include <stddef.h>
 #include <stdint.h>
@@ -148,4 +148,4 @@ ezi_result ezi_run_script(ezi_script *script, ezi_ops *ops);
 }
 #endif
 
-#endif /* EZINSTALL_H */
+#endif /* EZINSTALLLIB_H */

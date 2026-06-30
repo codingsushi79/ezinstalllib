@@ -52,7 +52,7 @@ static ezi_status download_curl(ezi_context *ctx, ezi_ops *ops, const char *url,
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, dl_write);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &dl);
-    curl_easy_setopt(curl, CURLOPT_USERAGENT, "ezinstall/0.1");
+    curl_easy_setopt(curl, CURLOPT_USERAGENT, "ezinstalllib/0.1");
 
     CURLcode rc = curl_easy_perform(curl);
     double cl = 0;

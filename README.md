@@ -1,6 +1,6 @@
-# clib — C install utilities
+# ezinstalllib
 
-**clib** is a portable C library for running installer scripts and performing install operations. It is inspired by [ezinstaller](https://github.com/codingsushi79/ezinstaller) — the Python tool that executes **EziScript** (`.ezi`) and **FEZI** (`.fezi`) definition files.
+**ezinstalllib** is a portable C library for running installer scripts and performing install operations. It is inspired by [ezinstaller](https://github.com/codingsushi79/ezinstaller) — the Python tool that executes **EziScript** (`.ezi`) and **FEZI** (`.fezi`) definition files.
 
 This library provides:
 
@@ -34,6 +34,7 @@ cmake --install build --prefix ~/.local
 ```bash
 ./build/ezi examples/demo.ezi
 ./build/ezi examples/demo.ezi --dry-run
+./build/run_demo
 ```
 
 After install, the demo launcher is at `~/.local/share/demo-app/bin/demo` on Unix.
@@ -41,7 +42,7 @@ After install, the demo launcher is at `~/.local/share/demo-app/bin/demo` on Uni
 ## Library usage
 
 ```c
-#include <ezinstall.h>
+#include <ezinstalllib.h>
 #include <stdio.h>
 
 int main(void) {
@@ -68,7 +69,7 @@ int main(void) {
 }
 ```
 
-Link with `-lezinstall` and include `ezinstall.h`.
+Link with `-lezinstalllib` and include `ezinstalllib.h`.
 
 ## EziScript format
 
@@ -95,10 +96,11 @@ FEZI (`.fezi`) AppleScript-style scripts are not parsed yet — convert to `.ezi
 ## Project layout
 
 ```
-include/ezinstall.h   Public API
-src/                  Library implementation
-tools/ezi.c           Command-line runner
-examples/             Sample .ezi installer
+include/ezinstalllib.h   Public API
+src/                     Library implementation
+tools/ezi.c              Command-line runner
+examples/run_demo.c      Example program using demo.ezi
+examples/                Sample .ezi installer
 ```
 
 ## License

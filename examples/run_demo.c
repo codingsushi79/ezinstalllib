@@ -1,5 +1,5 @@
 /*
- * Run examples/demo.ezi using libezinstall.
+ * Run examples/demo.ezi using ezinstalllib.
  *
  * Build (from repo root):
  *   cmake -B build && cmake --build build
@@ -9,7 +9,7 @@
  *   ./build/run_demo examples/demo.ezi
  *   ./build/run_demo examples/demo.ezi --dry-run
  */
-#include <ezinstall.h>
+#include <ezinstalllib.h>
 
 #include <stdio.h>
 #include <stdlib.h>
