@@ -1,0 +1,41 @@
+@name Demo Application
+@target ~/.local/share/demo-app
+@version 1.0.0
+
+MKDIR bin
+MKDIR lib
+MKDIR config
+
+GET https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore AS lib/sample.gitignore
+
+WRITE config/app.ini
+---
+# Demo app configuration
+name={{target}}
+installed_from={{script}}
+platform={{os}}
+version=1.0.0
+---
+
+COPY ./assets/welcome.txt TO config/welcome.txt
+
+OS unix
+WRITE bin/demo
+---
+#!/bin/sh
+echo "Demo app installed at {{target}} (platform: {{os}})"
+cat "{{target}}/config/welcome.txt"
+---
+CHMOD 755 bin/demo
+ENV PATH append {{target}}/bin
+END OS
+
+OS windows
+WRITE bin/demo.bat
+---
+@echo off
+echo Demo app installed at {{target}} (platform: {{os}})
+type "{{target}}\config\welcome.txt"
+---
+ENV PATH append {{target}}\bin
+END OS
